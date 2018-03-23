@@ -4,7 +4,7 @@ mkdir ca
 
 if [ ! -f ca/ca.key ]; then
 	echo "No CA key found - generating now..."
-	openssl genrsa -out ca/ca.key 4096
+	openssl genrsa -aes256 -out ca/ca.key 4096
 fi
 
 echo "Generating CA certificate now..."
