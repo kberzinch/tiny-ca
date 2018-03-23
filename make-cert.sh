@@ -1,10 +1,5 @@
 #!/bin/bash
 
-DATE=`date +%Y-%m-%d`
-
-echo "Enter client identifier: "
-read client
-
 if [ ! -f ca/ca.key ]; then
 	echo "No CA key found. Run make-ca.sh first."
 	exit
@@ -14,6 +9,13 @@ if [ ! -f ca/ca.crt ]; then
 	echo "No CA certificate found. Run make-ca.sh first."
 	exit
 fi
+
+DATE=`date +%Y-%m-%d`
+
+echo "Enter client identifier: "
+read client
+
+mkdir $client
 
 if [ ! -f $client.key ]; then
 	echo "No key found for client - generating now..."

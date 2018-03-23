@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir ca
+
 if [ ! -f ca/ca.key ]; then
 	echo "No CA key found - generating now..."
 	openssl genrsa -out ca/ca.key 4096
