@@ -38,6 +38,7 @@ echo "Verifying certificate..."
 openssl verify -CAfile ca/ca.crt $client/$DATE.crt
 
 rm $client/$DATE.csr
+rm $client/$DATE.crt
 
 chmod 400 $client/$client.key
 chmod 444 $client/$DATE.p12
