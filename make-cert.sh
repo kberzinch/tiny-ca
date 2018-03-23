@@ -39,5 +39,5 @@ openssl verify -CAfile ca/ca.crt $client/$DATE.crt
 
 rm $client/$DATE.csr
 
-chmod 400 $client/$client.key.key
+chmod 400 $client/$client.key
 chmod 444 $client/$DATE.p12
