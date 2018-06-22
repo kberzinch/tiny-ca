@@ -23,7 +23,9 @@ if [ ! -f $client/$client.key ]; then
 fi
 
 echo "Cleaning up old files..."
-rm *.p12
+rm $client/*.p12
+rm $client/*.csr
+rm $client/*.crt
 
 echo "Generating CSR..."
 openssl req -new -key $client/$client.key -out $client/$DATE.csr
