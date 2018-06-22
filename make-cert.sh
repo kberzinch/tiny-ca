@@ -17,7 +17,7 @@ read client
 
 mkdir $client
 
-if [ ! -f $client.key ]; then
+if [ ! -f $client/$client.key ]; then
 	echo "No key found for client - generating now..."
 	openssl genrsa -out $client/$client.key 4096
 fi
